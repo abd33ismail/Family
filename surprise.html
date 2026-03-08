@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المفاجأة</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .surprise-container {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: auto;
+    padding: 20px;
+    padding-bottom: 60px;
+  }
+
+  .surprise-image {
+    width: 500px;
+    border-radius: 30px;
+    box-shadow: 0 0 50px white;
+    margin: 20px 0;
+    animation: fadeInScale 1s ease-in;
+  }
+
+  .surprise-message {
+    font-size: 24px;
+    text-align: center;
+    margin: 20px;
+    animation: fadeIn 1.5s ease-in;
+  }
+
+  .back-button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background: gold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .back-button:hover {
+    transform: scale(1.1);
+  }
+
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .phrase {
+    opacity: 0;
+    animation: slideInUp 1s ease-out forwards;
+    margin: 15px 0;
+    font-size: 22px;
+  }
+
+  .phrase:nth-child(1) { animation-delay: 0.3s; }
+  .phrase:nth-child(2) { animation-delay: 0.6s; }
+  .phrase:nth-child(3) { animation-delay: 0.9s; }
+  .phrase:nth-child(4) { animation-delay: 1.2s; }
+  .phrase:nth-child(5) { animation-delay: 1.5s; }
+  .phrase:nth-child(6) { animation-delay: 1.8s; }
+</style>
+</head>
+<body>
+
+<div class="stars"></div>
+<div id="three-container"></div>
+
+<div class="surprise-container">
+  <h1 class="title">🌙 كل عام وأنتم يا عائلتي بالف خير  🌙</h1>
+  
+  <img src="images/family.jpg" class="surprise-image" alt="العائلة">
+  
+  <p class="surprise-message">
+    <div class="phrase">❤️ أحبكم يا أجمل عائلة ❤️</div>
+    <br>
+    <div class="phrase">🎆 أسأل الله أن يعيد هذا العيد علينا وعليكم بالخير والبركة والسعادة وأن يجمعنا دائماً في أفراحنا وأحزاننا</div>
+    <br>
+    <div class="phrase">🥰 وأن يرزقنا الصحة والعافية والنجاح في حياتنا</div>
+    <br>
+    <div class="phrase">🌟 أنتم النور الذي يضيء حياتي، والفرح الذي يملأ قلبي، والسبب في ابتسامتي</div>
+    <br>
+    <div class="phrase">🤲 أتمنى لكم عيداً سعيداً مليئاً بالحب والضحك والذكريات الجميلة</div>
+    <br>
+    <div class="phrase">💕 أحبكم من كل قلبي وأتمنى لكم كل السعادة في هذا العيد وكل أيام حياتكم</div>
+    <br>
+    <div class="phrase">🌈 اتمنى أن يحقق الجميع أحلامه وأن يكون للجميع مستقبل باهر</div>
+    <br>
+    <div class="phrase">🌹 عيد فطر مبارك يا أجمل عائلة في العالم 🌹</div>
+    
+  </p>
+  
+
+  <button class="back-button" onclick="window.location.href='/'">العودة للرئيسية 🏠</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/script_cinema.js"></script>
+
+</body>
+</html>
+
